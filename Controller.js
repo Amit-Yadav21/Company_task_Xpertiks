@@ -78,6 +78,9 @@ const Search_Post = (req, res) => {
         if (searchData.length > 0) {
             res.send({ 'searching data here': searchData })
         }
+        else{
+            res.status(404).send("search data not fund")
+        }
     } catch (error) {
         res.send(error.message)
     }
